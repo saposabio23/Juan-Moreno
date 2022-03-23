@@ -35,39 +35,26 @@ html#post {
 
 
 /* -----------------------------------
-Fonts
+Scrollbar
 -------------------------------------- */
-body::-webkit-scrollbar {
-  width: 3px;               /* width of the entire scrollbar */
-}
-
-body::-webkit-scrollbar-track {
-  background: transparent;        /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #D2CABF;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-    padding-right: 2px;
-}
 
 /* Works on Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: var(--color-default);
+  scrollbar-color: var(--color-default) transparent;
 }
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--color-default);
+  background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: transparent;
+  background-color: var(--color-default);
   border-radius: 20px;
 }
 
