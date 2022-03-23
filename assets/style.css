@@ -1,3 +1,136 @@
+/* -----------------------------------
+Variables
+-------------------------------------- */
+
+:root {
+    --color-bg: #023e8a;
+    --color-highlight: #F8F6F5;
+    --color-default: #D2CABF;
+    --color-dim: #8f8f8f;
+    --color-high: #eb5e28;
+    --font-sans: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    --font-serif: Times, serif;
+    --font-size: 16px;
+    --font-std: 14px;
+    --font-size-serif: 18px;
+    --spacing: 1.5em;
+    --spacing-s: calc(0.5 * var(--spacing));
+    --spacing-m: var(--spacing);
+    --spacing-l: calc(1.5 * var(--spacing));
+    --spacing-xl: calc(2.5 * var(--spacing));
+    --spacing-xxl: calc(5 * var(--spacing));
+    --spacing-col: calc(6 * var(--spacing));
+    --spacing-width-max: 38rem;
+    --spacing-width-tiny: 15rem;
+    --spacing-width-xl: 50rem;
+}
+
+html#post {
+    --color-bg: #F8F6F5;
+    --color-default: #3b3a38;
+    --color-highlight: #000;
+    --color-dim: #93918F;
+    --color-vdim: #c9c5c1;
+}
+
+
+/* -----------------------------------
+Fonts
+-------------------------------------- */
+body::-webkit-scrollbar {
+  width: 3px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #D2CABF;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+    padding-right: 2px;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-default);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-default);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+/* -----------------------------------
+Base
+-------------------------------------- */
+
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    font-feature-settings: "kern" 1,"liga" 1;
+}
+
+html {
+    font-size: var(--font-std);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    background-color: var(--color-bg);
+    color: var(--color-default);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "onum" 1, "liga" 1;
+    font-size: var(--font-size);
+    line-height: 1.5;
+    padding: 1.5rem;
+    overflow-y: scroll;
+}
+
+body {
+    margin: 3vw 0 1vw 0;
+}
+
+section {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* -----------------------------------
+Header
+-------------------------------------- */
+
+body>header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: var(--spacing-xxl);
+    color: var(--color-dim);
+}
+
+body>header h1 {
+    margin: 0;
+}
+
+body>header img {
+    display: block;
+    border-radius: 100%;
+    height: calc(3 * var(--spacing));
+    width: auto;
+}
+
+body>header a {
+    text-decoration: none;
+}
 
 .hide{
   display: none !important;
@@ -64,7 +197,6 @@
     }
 }
 
-
 .language{
     max-width: var(--spacing-width-max);
     margin-left: auto;
@@ -83,145 +215,6 @@
 
 .language:hover a{
     cursor: pointer;
-}
-
-.downloadcv{
-  color: var(--color-default);
-  background-color: var(--color-dim);
-  font-size: var(--base-font-size);
-  border-radius: 0.25rem;
-  border: 0px solid transparent;
-  text-align: center;
-  padding: 0.575rem 0.75rem 0.375rem 0.75rem;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-}
-
-.downloadcv:hover{
-  transition: all 0.2s ease-in-out;
-  color: var(--color-default);
-  background-color: var(--color-high);
-  text-decoration: none;
-}
-
-.downloadcv:active {
-    color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf;
-  }
-
-.firma {
-    text-align: center;
-    color: var(--color-dim);
-    font-weight: 500;
-    font-size: 0.9rem;}
-
-
-.firma a {
-      color: var(--color-dim);
-      transition: color 0.2s ease-in;
-}
-
-/* -----------------------------------
-Variables
--------------------------------------- */
-
-:root {
-    --color-bg: #023e8a;
-    --color-highlight: #F8F6F5;
-    --color-default: #D2CABF;
-    --color-dim: #8f8f8f;
-    --color-high: #eb5e28;
-    --font-sans: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-    --font-serif: Times, serif;
-    --font-size: 16px;
-    --font-std: 14px;
-    --font-size-serif: 18px;
-    --spacing: 1.5em;
-    --spacing-s: calc(0.5 * var(--spacing));
-    --spacing-m: var(--spacing);
-    --spacing-l: calc(1.5 * var(--spacing));
-    --spacing-xl: calc(2.5 * var(--spacing));
-    --spacing-xxl: calc(5 * var(--spacing));
-    --spacing-col: calc(6 * var(--spacing));
-    --spacing-width-max: 38rem;
-    --spacing-width-tiny: 15rem;
-    --spacing-width-xl: 50rem;
-}
-
-html#post {
-    --color-bg: #F8F6F5;
-    --color-default: #3b3a38;
-    --color-highlight: #000;
-    --color-dim: #93918F;
-    --color-vdim: #c9c5c1;
-}
-
-
-/* -----------------------------------
-Fonts
--------------------------------------- */
-
-
-
-/* -----------------------------------
-Base
--------------------------------------- */
-
-* {
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-    font-feature-settings: "kern" 1,"liga" 1;
-}
-
-html {
-    font-size: var(--font-std);
-    font-family: var(--font-sans);
-    line-height: 1.5;
-    background-color: var(--color-bg);
-    color: var(--color-default);
-    font-family: var(--font-sans);
-    font-weight: 500;
-    -webkit-font-smoothing: antialiased;
-    font-feature-settings: "onum" 1, "liga" 1;
-    font-size: var(--font-size);
-    line-height: 1.5;
-    padding: 1.5rem;
-}
-
-body {
-    margin: 3vw 0 1vw 0;
-}
-
-section {
-    margin-bottom: var(--spacing-xl);
-}
-
-/* -----------------------------------
-Header
--------------------------------------- */
-
-body>header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: var(--spacing-xxl);
-    color: var(--color-dim);
-}
-
-body>header h1 {
-    margin: 0;
-}
-
-body>header img {
-    display: block;
-    border-radius: 100%;
-    height: calc(3 * var(--spacing));
-    width: auto;
-}
-
-body>header a {
-    text-decoration: none;
 }
 
 
@@ -340,6 +333,42 @@ Home
   margin-top: 20px;
 }
 
+.downloadcv{
+  color: var(--color-default);
+  background-color: var(--color-dim);
+  font-size: var(--base-font-size);
+  border-radius: 0.25rem;
+  border: 0px solid transparent;
+  text-align: center;
+  padding: 0.575rem 0.75rem 0.375rem 0.75rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.downloadcv:hover{
+  transition: all 0.2s ease-in-out;
+  color: var(--color-default);
+  background-color: var(--color-high);
+  text-decoration: none;
+}
+
+.downloadcv:active {
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #005cbf;
+  }
+
+.firma {
+    text-align: center;
+    color: var(--color-dim);
+    font-weight: 500;
+    font-size: 0.9rem;}
+
+
+.firma a {
+      color: var(--color-dim);
+      transition: color 0.2s ease-in;
+}
 
 @media (min-width: 600px) {
     .split {
