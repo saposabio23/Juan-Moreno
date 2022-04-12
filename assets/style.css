@@ -192,17 +192,6 @@ body>header a {
     width: 100%;
   }
 
-  .language a{
-    color: var(--color-default);
-    text-decoration: underline;
-    text-decoration-color: var(--color-dim);
-    text-decoration-thickness: 0.5px;
-    text-underline-offset: 0.05em;
-    }
-
-.language:hover a{
-    cursor: pointer;
-}
 
 
 /* -----------------------------------
@@ -222,24 +211,27 @@ article h1 {
 
 h2 {
     margin: var(--spacing-m) 0;
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 h3 {
     margin: 0;
 }
 
-a {
+a, .link{
     color: var(--color-default);
     text-decoration-color: var(--color-dim);
     text-decoration-thickness: 0.5px;
     text-underline-offset: 0.05em;
+    text-decoration: underline;
 }
 
-a:hover {
+a:hover, .link:hover {
     transition: color 0.2s ease-in;
     color: var(--color-high);
+    cursor: pointer;
 }
+
 
 h3 a {
     color: var(--color-highlight);
