@@ -20,7 +20,7 @@ Variables
     --spacing-xl: calc(2.5 * var(--spacing));
     --spacing-xxl: calc(5 * var(--spacing));
     --spacing-col: calc(6 * var(--spacing));
-    --spacing-width-max: 38rem;
+    --spacing-width-max: 37.5rem;
     --spacing-width-tiny: 15rem;
     --spacing-width-xl: 50rem;
 }
@@ -320,7 +320,7 @@ Home
   border-radius: 0.25rem;
   border: 0px solid transparent;
   text-align: center;
-  padding: 8px 10px 5px 10px;
+  padding: 8px 10px 6px 10px;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
@@ -348,6 +348,12 @@ Home
 .firma a {
       color: var(--color-dim);
       transition: color 0.2s ease-in;
+}
+
+.firma a:hover {
+  transition: color 0.2s ease-in;
+  color: var(--color-high);
+  cursor: pointer;
 }
 
 

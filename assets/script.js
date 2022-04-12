@@ -20,7 +20,3 @@ function showES() {
 
 $langUS.addEventListener("click", showUS ,false);
 $langES.addEventListener("click", showES, false);
-
-function showmail() {
-   alert ("juanmorenoesteban@opendeusto.es");
-}
