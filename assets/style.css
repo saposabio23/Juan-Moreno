@@ -345,11 +345,13 @@ Home
   background-color: var(--color-dim);
   font-size: var(--base-font-size);
   border-radius: 0.25rem;
-  border: 0px solid transparent;
-  text-align: center;
-  padding: 6px 10px 8px 10px;
+  border: none;
+  padding: 6px 10px 2px 10px;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .downloadcv:hover{
