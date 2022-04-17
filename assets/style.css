@@ -26,11 +26,11 @@
 }
 
 /* -----------------------------------
-Variables#023e8a;
+Variables
 -------------------------------------- */
 
 :root {
-    --color-bg: red;
+    --color-bg: #023e8a;
     --color-highlight: #F8F6F5;
     --color-default: #D2CABF;
     --color-dim: #8f8f8f;
