@@ -398,6 +398,47 @@ small + p {
 }
 
 
+
+.emailEN, .emailES {
+  opacity: 1;
+  display: inline;
+  transition: all .1s ease-in-out;
+}
+
+
+.copymailEN, .copymailES {
+  opacity: 0;
+  display: none;
+  transition: all .1s ease-in-out;
+}
+
+.copymailEN:hover, .copymailES:hover {
+  cursor: pointer;
+  color: var(--color-high);
+}
+
+.emailcopiedEN, .emailcopiedES {
+  opacity: 0;
+  display: none;
+  transition: all .1s ease-in-out;
+}
+
+
+.hide{
+  opacity: 0;
+  display: none;
+  transition: all .1s ease-in-out;
+}
+
+.show{
+  opacity: 1;
+  display: inline;
+  transition: all .2s ease-in-out;
+}
+
+
+
+
 /* -----------------------------------
 Limit widths
 -------------------------------------- */
