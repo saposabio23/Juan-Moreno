@@ -397,7 +397,9 @@ small + p {
     margin-top: var(--spacing-s);
 }
 
-
+.emailBK{
+  display: none;
+}
 
 .emailEN, .emailES {
   opacity: 1;
@@ -493,5 +495,19 @@ p{
 .label {
   margin-bottom: 0.5em;
 }
+
+.emailBK{
+  display: block;
+}
+
+.emailEN, .copymailEN, .emailcopiedEN{
+  display: none;
+}
+
+.emailES, .copymailES, .emailcopiedES{
+  display: none;
+}
+
+
 
 }
