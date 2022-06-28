@@ -1,3 +1,5 @@
+console.log("Handmade website by Pablo Moreno (www.aazzzuuppp.com)");
+
 
 var $langUS = document.querySelector('#langUS');
 var $langES = document.querySelector('#langES');
@@ -98,3 +100,52 @@ function copyMailES() {
 }
 $copyemailES.addEventListener("click", copyMailES);
 $emailES.addEventListener("touchstart", copyMailES);
+
+
+/* -----------------------------------
+PM footer
+-------------------------------------- */
+
+function clikShowMade() {
+
+  var $pmtext = document.getElementsByClassName("pmtext");
+    for(var i = 0; i < $pmtext.length; i++) {
+      $pmtext[i].classList.add("pmshow");}
+
+  var $pmlogo = document.getElementsByClassName("pmlogo");
+    for(var i = 0; i < $pmlogo.length; i++) {
+      $pmlogo[i].classList.add("pmhide");}
+
+     setTimeout(function(){
+      var $pmtext = document.getElementsByClassName("pmtext");
+        for(var i = 0; i < $pmtext.length; i++) {
+          $pmtext[i].classList.remove("pmshow");}
+
+      var $pmlogo = document.getElementsByClassName("pmlogo");
+        for(var i = 0; i < $pmlogo.length; i++) {
+          $pmlogo[i].classList.remove("pmhide");}
+  }, 5000);
+}
+
+function hoverToTurn() {
+  var $pmlogo = document.getElementsByClassName("pmlogo");
+    for(var i = 0; i < $pmlogo.length; i++) {
+      $pmlogo[i].classList.add("pmlogoturn");}
+
+   setTimeout(function(){
+    var $pmlogo = document.getElementsByClassName("pmlogo");
+    for(var i = 0; i < $pmlogo.length; i++) {
+      $pmlogo[i].classList.remove("pmlogoturn");}
+  }, 1000);
+}
+
+var $pmlogo = document.querySelectorAll(".pmlogo").length;
+var $pmtext = document.querySelectorAll(".pmtext").length;
+
+for (var i = 0; i < $pmlogo ; i++) {
+  document.querySelectorAll(".pmlogo")[i].addEventListener('mouseenter', hoverToTurn, false);
+}
+
+for (var i = 0; i < $pmlogo ; i++) {
+  document.querySelectorAll(".pmlogo")[i].addEventListener("click", clikShowMade, false);
+}

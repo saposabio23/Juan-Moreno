@@ -365,22 +365,15 @@ Home
     border-color: #005cbf;
   }
 
-.firma {
-    text-align: center;
-    color: var(--color-dim);
-    font-weight: 500;
-    font-size: 0.9rem;}
 
+@keyframes upps {
 
-.firma a {
-      color: var(--color-dim);
-      transition: color 0.2s ease-in;
-}
-
-.firma a:hover {
-  transition: color 0.2s ease-in;
-  color: var(--color-high);
-  cursor: pointer;
+  0% {
+    transform: scaleY(100%);
+  }
+  100% {
+    transform: scaleY(130%);
+  }
 }
 
 
@@ -395,10 +388,6 @@ Home
 
 small + p {
     margin-top: var(--spacing-s);
-}
-
-.emailBK{
-  display: none;
 }
 
 .emailEN, .emailES {
@@ -438,7 +427,59 @@ small + p {
   transition: all .2s ease-in-out;
 }
 
+/* -----------------------------------
+PM footer
+-------------------------------------- */
 
+.madeby {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 25px;
+}
+
+.pmlogo {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-in-out, visibility 0s;
+  top: 0; position: absolute;
+  cursor: help;
+}
+
+.pmtext {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 0s;
+}
+
+.pmshow {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: opacity 1s ease-in-out, visibility 0s;
+}
+
+.pmhide {
+  opacity: 0 !important;
+  visibility: collapse !important;
+  transition: opacity 1s ease-in-out, visibility 0s;
+}
+
+.pmlogoturn {
+  animation: spin 1s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
 /* -----------------------------------
@@ -495,19 +536,5 @@ p{
 .label {
   margin-bottom: 0.5em;
 }
-
-.emailBK{
-  display: block;
-}
-
-.emailEN, .copymailEN, .emailcopiedEN{
-  display: none;
-}
-
-.emailES, .copymailES, .emailcopiedES{
-  display: none;
-}
-
-
 
 }
